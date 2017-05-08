@@ -36,4 +36,6 @@
   ;; you should take care to exclude the things that you don't want
   ;; in your final jar.  Here is an example of how you could exclude
   ;; that from the final uberjar:
-  :uberjar-exclusions  [#"META-INF/jruby.home/lib/ruby/shared/org/bouncycastle"])
+  :uberjar-exclusions  [#"META-INF/jruby.home/lib/ruby/shared/org/bouncycastle"]
+
+  :plugins [[lein-release-4digit-version "0.2.0"]])
