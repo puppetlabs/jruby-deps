@@ -23,7 +23,7 @@
    ['com.github.jnr/jnr-x86asm "1.0.2"]
    ['org.jruby/jruby-stdlib jruby-version]])
 
-(defproject puppetlabs/jruby-deps "1.7.26-2-SNAPSHOT"
+(defproject puppetlabs/jruby-deps "1.7.26-2"
   :description "JRuby dependencies"
   :url "https://github.com/puppetlabs/jruby-deps"
   :license {:name "Apache License, Version 2.0"
