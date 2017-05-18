@@ -1,4 +1,4 @@
-(def jruby-version "1.7.26")
+(def jruby-version "1.7.27")
 (def jffi-version "1.2.12")
 
 (defn deps-with-jruby-core-exclusions
@@ -23,7 +23,7 @@
    ['com.github.jnr/jnr-x86asm "1.0.2"]
    ['org.jruby/jruby-stdlib jruby-version]])
 
-(defproject puppetlabs/jruby-deps "1.7.26-3-SNAPSHOT"
+(defproject puppetlabs/jruby-deps "1.7.27-1-SNAPSHOT"
   :description "JRuby dependencies"
   :url "https://github.com/puppetlabs/jruby-deps"
   :license {:name "Apache License, Version 2.0"
