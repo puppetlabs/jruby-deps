@@ -1,6 +1,6 @@
-(def jruby-version "9.1.8.0")
+(def jruby-version "9.1.9.0")
 
-(defproject puppetlabs/jruby-deps "9.1.8.0-3-SNAPSHOT"
+(defproject puppetlabs/jruby-deps "9.1.9.0-1-SNAPSHOT"
   :description "JRuby dependencies"
   :url "https://github.com/puppetlabs/jruby-deps"
   :license {:name "Apache License, Version 2.0"
@@ -29,8 +29,7 @@
   ;; jruby-deps uberjar.
   :profiles {:uberjar {:dependencies
                        [[org.jruby/jruby-core ~jruby-version
-                         :exclusions [joda-time
-                                      org.yaml/snakeyaml]]]}}
+                         :exclusions [joda-time]]]}}
 
   :uberjar-name "jruby-9k.jar"
 
