@@ -11,6 +11,13 @@
   :pedantic? :abort
 
   :dependencies [[org.jruby/jruby-core ~jruby-version]
+                 [com.github.jnr/jffi "1.2.16"]
+                 [com.github.jnr/jffi "1.2.16" :classifier "native"]
+                 [com.github.jnr/jnr-ffi "2.1.6" :exclusions [org.ow2.asm/asm-analysis
+                                                              org.ow2.asm/asm-commons
+                                                              org.ow2.asm/asm-tree
+                                                              org.ow2.asm/asm-util
+                                                              org.ow2.asm/asm]]
                  [org.jruby/jruby-stdlib ~jruby-version]]
 
   :deploy-repositories [["releases" {:url "https://clojars.org/repo"
