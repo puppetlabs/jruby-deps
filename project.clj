@@ -10,7 +10,8 @@
 
   :pedantic? :abort
 
-  :dependencies [[org.jruby/jruby-core ~jruby-version :exclusions [org.jruby.jcodings/jcodings]]
+  :dependencies [[org.jruby.jcodings/jcodings "1.0.18"]
+                 [org.jruby/jruby-core ~jruby-version :exclusions [org.jruby.jcodings/jcodings]]
                  [org.jruby/jruby-stdlib ~jruby-version]]
 
   :deploy-repositories [["releases" {:url "https://clojars.org/repo"
