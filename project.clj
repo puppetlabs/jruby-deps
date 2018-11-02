@@ -1,6 +1,6 @@
-(def jruby-version "9.1.16.0")
+(def jruby-version "9.2.0.0")
 
-(defproject puppetlabs/jruby-deps "9.1.16.0-2-SNAPSHOT"
+(defproject puppetlabs/jruby-deps "9.2.0.0-1-SNAPSHOT"
   :description "JRuby dependencies"
   :url "https://github.com/puppetlabs/jruby-deps"
   :license {:name "Apache License, Version 2.0"
@@ -10,8 +10,7 @@
 
   :pedantic? :abort
 
-  :dependencies [[org.jruby.jcodings/jcodings "1.0.18"]
-                 [org.jruby/jruby-core ~jruby-version :exclusions [org.jruby.jcodings/jcodings]]
+  :dependencies [[org.jruby/jruby-core ~jruby-version]
                  [org.jruby/jruby-stdlib ~jruby-version]]
 
   :deploy-repositories [["releases" {:url "https://clojars.org/repo"
