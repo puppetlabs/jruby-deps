@@ -1,6 +1,6 @@
-(def jruby-version "9.2.0.0")
+(def jruby-version "9.2.4.0")
 
-(defproject puppetlabs/jruby-deps "9.2.0.0-2-SNAPSHOT"
+(defproject puppetlabs/jruby-deps "9.2.4.0-1-SNAPSHOT"
   :description "JRuby dependencies"
   :url "https://github.com/puppetlabs/jruby-deps"
   :license {:name "Apache License, Version 2.0"
@@ -11,7 +11,12 @@
   :pedantic? :abort
 
   :dependencies [[org.jruby/jruby-core ~jruby-version]
-                 [org.jruby/jruby-stdlib ~jruby-version]]
+                 [org.jruby/jruby-stdlib ~jruby-version]
+
+                 ;; Dependency conflict when upgrading to JRuby 9.2.4,
+                 ;; should re-evaluate its necessity when upgrading next
+                 [com.github.jnr/jnr-posix "3.0.46"
+                  :exclusions [com.github.jnr/jnr-constants]]]
 
   :deploy-repositories [["releases" {:url "https://clojars.org/repo"
                                      :username :env/clojars_jenkins_username
