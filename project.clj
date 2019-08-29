@@ -20,6 +20,14 @@
 
   :plugins [[lein-release-4digit-version "0.2.0"]]
 
+  ;; EZbake relies on this being stored top-level in the jar,
+  ;; when including this project as an additional uberjar when building
+  ;; pe-puppetserver. Lein 2.8.0 stopped adding project.clj at the top level.
+  ;; Long term, it might be better to fix ezbake to handle the file's new location
+  ;; under `META-INF/leiningen/group/artifact/project.clj`, but since this is the
+  ;; only project that relies on that right now, it's simpler to just add it here.
+  :resource-paths ["project.clj"]
+
   ;; For the jruby-deps uberjar builds, we want to exclude a few "common"
   ;; dependencies which we expect to be provided by other jars in the Java
   ;; classpath. We do this in order to make the dependency resolution
