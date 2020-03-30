@@ -1,4 +1,4 @@
-(def jruby-version "9.2.11.0")
+(def jruby-version "9.2.11.1")
 
 (defproject puppetlabs/jruby-deps "9.2.11.0-2-SNAPSHOT"
   :description "JRuby dependencies"
