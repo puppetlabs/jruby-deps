@@ -11,12 +11,7 @@
   :pedantic? :abort
 
   :dependencies [[org.jruby/jruby-core ~jruby-version]
-                 [org.jruby/jruby-stdlib ~jruby-version]
-
-                 ;; Works around CVE-2014-4043 in JRuby,
-                 ;; Unpin when we upgrade to at least JRuby 9.2.20
-                 [com.github.jnr/jnr-posix "3.1.8" :exclusions [com.github.jnr/jffi
-                                                                com.github.jnr/jnr-constants]]]
+                 [org.jruby/jruby-stdlib ~jruby-version]]
 
   :deploy-repositories [["releases" {:url "https://clojars.org/repo"
                                      :username :env/clojars_jenkins_username
