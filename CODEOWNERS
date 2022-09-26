@@ -1,6 +1,4 @@
-# This will cause the puppetserver-maintainers group to be assigned
-# review of any opened PRs against the branches containing this file.
+# This repo is owned by the PE teams
 
-* @puppetlabs/dumpling
-* @puppetlabs/skeletor
+* @puppetlabs/dumpling @puppetlabs/skeletor
 
