@@ -10,7 +10,13 @@
 
   :pedantic? :abort
 
-  :dependencies [[org.jruby/jruby-core ~jruby-version]
+  :dependencies [[com.github.jnr/jnr-enxio "0.32.13"]
+                 [com.github.jnr/jnr-unixsocket "0.38.17"]
+                 [com.github.jnr/jnr-posix "3.1.15"]
+                 [com.github.jnr/jnr-constants "0.10.3"]
+                 [com.github.jnr/jnr-ffi "2.2.11"]
+                 [org.jruby/jruby-core ~jruby-version
+                  :exclusions [com.github.jnr/jnr-enxio com.github.jnr/jnr-unixsocket com.github.jnr/jnr-posix com.github.jnr/jnr-constants com.github.jnr/jnr-ffi]]
                  [org.jruby/jruby-stdlib ~jruby-version]]
 
   :deploy-repositories [["releases" {:url "https://clojars.org/repo"
