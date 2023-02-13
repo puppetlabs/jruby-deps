@@ -36,23 +36,4 @@
   ;; only project that relies on that right now, it's simpler to just add it here.
   :resource-paths ["project.clj"]
 
-  ;; For the jruby-deps uberjar builds, we want to exclude a few "common"
-  ;; dependencies which we expect to be provided by other jars in the Java
-  ;; classpath. We do this in order to make the dependency resolution
-  ;; predictable regardless of the order in which the jars are referenced on the
-  ;; classpath. Dependencies in the uberjar profile replace those from the base
-  ;; project definition in order to exclude the unwanted dependencies from the
-  ;; jruby-deps uberjar.
-  :profiles {:uberjar {:dependencies
-                       [[org.jruby/jruby-core ~jruby-version
-                         :exclusions [joda-time]]]}}
-
-  :uberjar-name "jruby-9k.jar"
-
-  ;; NOTE: jruby-stdlib packages some unexpected things inside
-  ;; of its jar.  e.g., it puts a pre-built copy of the bouncycastle
-  ;; and snakeyaml jars into its META-INF directory.  This is highly
-  ;; undesirable for projects that already have dependencies on different
-  ;; versions of these jars.  Items below are excluded from the uberjar.
-  :uberjar-exclusions  [#"META-INF/jruby.home/lib/ruby/stdlib/org/bouncycastle"
-                        #"META-INF/jruby.home/lib/ruby/stdlib/org/yaml/snakeyaml"])
+  :uberjar-name "jruby-9k.jar")
