@@ -1,6 +1,6 @@
-(def jruby-version "9.4.0.0")
+(def jruby-version "9.4.1.0")
 
-(defproject puppetlabs/jruby-deps "9.4.0.0-3-SNAPSHOT"
+(defproject puppetlabs/jruby-deps "9.4.1.0-1-SNAPSHOT"
   :description "JRuby dependencies"
   :url "https://github.com/puppetlabs/jruby-deps"
   :license {:name "Apache License, Version 2.0"
@@ -15,9 +15,10 @@
                  [com.github.jnr/jnr-posix "3.1.15"]
                  [com.github.jnr/jnr-constants "0.10.3"]
                  [com.github.jnr/jnr-ffi "2.2.11"]
-                 [org.jruby/jruby-core ~jruby-version
-                  :exclusions [com.github.jnr/jnr-enxio com.github.jnr/jnr-unixsocket com.github.jnr/jnr-posix com.github.jnr/jnr-constants com.github.jnr/jnr-ffi]]
-                 [org.jruby/jruby-stdlib ~jruby-version]]
+                 [org.jruby/jruby-base ~jruby-version
+                  :exclusions [com.github.jnr/jffi com.github.jnr/jnr-enxio com.github.jnr/jnr-unixsocket com.github.jnr/jnr-posix com.github.jnr/jnr-constants com.github.jnr/jnr-ffi]]
+                 [org.jruby/jruby-stdlib ~jruby-version]
+                 [org.snakeyaml/snakeyaml-engine "2.6"]
 
   :deploy-repositories [["releases" {:url "https://clojars.org/repo"
                                      :username :env/clojars_jenkins_username
