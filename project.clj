@@ -16,9 +16,10 @@
                  [com.github.jnr/jnr-constants "0.10.3"]
                  [com.github.jnr/jnr-ffi "2.2.11"]
                  [org.jruby/jruby-base ~jruby-version
-                  :exclusions [com.github.jnr/jffi com.github.jnr/jnr-enxio com.github.jnr/jnr-unixsocket com.github.jnr/jnr-posix com.github.jnr/jnr-constants com.github.jnr/jnr-ffi]]
+                  :exclusions [com.github.jnr/jffi com.github.jnr/jnr-enxio com.github.jnr/jnr-unixsocket com.github.jnr/jnr-posix com.github.jnr/jnr-constants com.github.jnr/jnr-ffi joda-time]]
                  [org.jruby/jruby-stdlib ~jruby-version]
                  [org.snakeyaml/snakeyaml-engine "2.6"]
+                 [joda-time "2.10.10"]]
 
   :deploy-repositories [["releases" {:url "https://clojars.org/repo"
                                      :username :env/clojars_jenkins_username
