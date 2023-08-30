@@ -6,14 +6,16 @@
   :license {:name "Apache License, Version 2.0"
             :url "http://www.apache.org/licenses/LICENSE-2.0"}
 
+  :parent-project {:coords [puppetlabs/clj-parent "7.2.0"]
+                   :inherit [:managed-dependencies]}
+
   :min-lein-version "2.7.1"
 
   :pedantic? :abort
 
-  :dependencies [[org.jruby/jruby-base ~jruby-version]
+  :dependencies [[org.jruby/jruby-base ~jruby-version :exclusions [joda-time]]
                  [org.jruby/jruby-stdlib ~jruby-version]
-                 [org.snakeyaml/snakeyaml-engine "2.6"]
-                 [joda-time "2.10.10"]]
+                 [org.snakeyaml/snakeyaml-engine "2.7"]]
 
   :deploy-repositories [["releases" {:url "https://clojars.org/repo"
                                      :username :env/clojars_jenkins_username
