@@ -10,13 +10,7 @@
 
   :pedantic? :abort
 
-  :dependencies [[com.github.jnr/jnr-enxio "0.32.13"]
-                 [com.github.jnr/jnr-unixsocket "0.38.17"]
-                 [com.github.jnr/jnr-posix "3.1.15"]
-                 [com.github.jnr/jnr-constants "0.10.3"]
-                 [com.github.jnr/jnr-ffi "2.2.11"]
-                 [org.jruby/jruby-base ~jruby-version
-                  :exclusions [com.github.jnr/jffi com.github.jnr/jnr-enxio com.github.jnr/jnr-unixsocket com.github.jnr/jnr-posix com.github.jnr/jnr-constants com.github.jnr/jnr-ffi joda-time]]
+  :dependencies [[org.jruby/jruby-base ~jruby-version]
                  [org.jruby/jruby-stdlib ~jruby-version]
                  [org.snakeyaml/snakeyaml-engine "2.6"]
                  [joda-time "2.10.10"]]
