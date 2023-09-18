@@ -1,25 +1,21 @@
-(def jruby-version "9.4.2.0")
+(def jruby-version "9.4.3.0")
 
-(defproject puppetlabs/jruby-deps "9.4.2.0-2-SNAPSHOT"
+(defproject puppetlabs/jruby-deps "9.4.3.0-1-SNAPSHOT"
   :description "JRuby dependencies"
   :url "https://github.com/puppetlabs/jruby-deps"
   :license {:name "Apache License, Version 2.0"
             :url "http://www.apache.org/licenses/LICENSE-2.0"}
 
+  :parent-project {:coords [puppetlabs/clj-parent "7.2.0"]
+                   :inherit [:managed-dependencies]}
+
   :min-lein-version "2.7.1"
 
   :pedantic? :abort
 
-  :dependencies [[com.github.jnr/jnr-enxio "0.32.13"]
-                 [com.github.jnr/jnr-unixsocket "0.38.17"]
-                 [com.github.jnr/jnr-posix "3.1.15"]
-                 [com.github.jnr/jnr-constants "0.10.3"]
-                 [com.github.jnr/jnr-ffi "2.2.11"]
-                 [org.jruby/jruby-base ~jruby-version
-                  :exclusions [com.github.jnr/jffi com.github.jnr/jnr-enxio com.github.jnr/jnr-unixsocket com.github.jnr/jnr-posix com.github.jnr/jnr-constants com.github.jnr/jnr-ffi joda-time]]
+  :dependencies [[org.jruby/jruby-base ~jruby-version :exclusions [joda-time]]
                  [org.jruby/jruby-stdlib ~jruby-version]
-                 [org.snakeyaml/snakeyaml-engine "2.6"]
-                 [joda-time "2.10.10"]]
+                 [org.snakeyaml/snakeyaml-engine "2.7"]]
 
   :deploy-repositories [["releases" {:url "https://clojars.org/repo"
                                      :username :env/clojars_jenkins_username
